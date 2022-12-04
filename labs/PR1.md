@@ -14,12 +14,10 @@ Application of analog joy-stick (2 ADC channels, 1 push button), rotary encoder,
    │  └── gpio
    │       └── gpio.c
    │       └── gpio.h
-   │
    │   └── lcd
    │        └── lcd.definitions.h
    │        └── lcd.h
    │        └── lcd.c
-   │
    ├── src             // Source file(s)
    │   └── main.c
    └── platformio.ini  // Project Configuration File
@@ -39,13 +37,6 @@ Application of analog joy-stick (2 ADC channels, 1 push button), rotary encoder,
 * GND to GND 
 * +5V to +5V
 * Vrx and Vry we connect to analog pins A0, A1 
-
-### Rotation encoder
-
-* GND to GND
-* +5V to +5V
-* CLK and DT to digital pins 11, 12
-* SW to digital pin 2
 
 ### Digilent PmodCLP LCD modul 
 
