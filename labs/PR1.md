@@ -30,7 +30,7 @@ Application of analog joy-stick (2 ADC channels, 1 push button), rotary encoder,
 
 ## Hardware description
 
-### Joystick
+### Joy-stick
 
 * GND to GND 
 * +5V to +5V
