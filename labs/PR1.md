@@ -23,8 +23,6 @@ Application of analog joy-stick (2 ADC channels, 1 push button), rotary encoder,
    └── platformio.ini  // Project Configuration File
    ```
 
-## Recommended README.md file structure
-
 ### Team members
 
 * Maksim Migulia (233261)
