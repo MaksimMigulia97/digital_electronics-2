@@ -1,84 +1,63 @@
-/* Includes ----------------------------------------------------------*/
-#include <avr/io.h>         // AVR device-specific IO definitions
-#include <avr/interrupt.h>  // Interrupts standard C library for AVR-GCC
-#include <gpio.h>           // GPIO library for AVR-GCC
-#include "timer.h"          // Timer library for AVR-GCC
-#include <lcd.h>            // Peter Fleury's LCD library
-#include <stdlib.h>         // C library. Needed for number conversions
+# Project 1
 
-int position;
-int x;
-int y;
-
-int main(void)
-{
-    // Initialize display
-    lcd_init(LCD_DISP_ON);
-    lcd_gotoxy(1, 0); lcd_puts("joy:");
-    lcd_gotoxy(1, 1); lcd_puts("encoder:");
-    lcd_gotoxy(6, 0); lcd_puts("0");
-    lcd_gotoxy(9,1); lcd_puts("0");
-     ADMUX = ADMUX | (1<<REFS0);
-     ADMUX = ADMUX & ~((1<<MUX3) | (1<<MUX2) | (1<<MUX1)| (1<<MUX0));
-     ADCSRA |= (1<<ADEN);
-    ADCSRA |= (1<<ADIE);
-    ADCSRA |= (1<<ADPS2) | (1<<ADPS1) | (1<<ADPS0);
-    TIM1_overflow_262ms();
-    TIM1_overflow_interrupt_enable();
-    sei();
-    while (1)
-    {
-        /*  Ань я не понял зачем это надо? Если не нужно удали */
-    }
-    return 0;
-}
-ISR(TIMER1_OVF_vect)
-{
-    if (position == 0)
-    {
-      ADMUX |= (1<<MUX0);
-      ADCSRA |= (1<<ADSC);
-       y = ADC;
-    }
-    else
-    {
-      ADMUX = ADMUX &= ~ (1<<MUX0);
-      ADCSRA |= (1<<ADSC);
-      x = ADC;
+Application of analog joy-stick (2 ADC channels, 1 push button), rotary encoder, and Digilent PmodCLP LCD module.
 
 
-    }
 
-}
-ISR(ADC_vect)
-{
-    uint16_t value;
-    char string[4];
-    itoa (x, string, 10);
-    lcd_gotoxy(6,0);
-    lcd_puts("    ");
-    lcd_gotoxy(6,0);
-    lcd_puts(string);
-    lcd_gotoxy(10, 0);
-    if (x >530 )
-    {
-     lcd_gotoxy(10, 0);
-     lcd_puts("right");
-    }
-    else if (x < 100)
-    {
-      lcd_gotoxy(10, 0);
-      lcd_puts("left ");
-    }
+## GitHub repository structure
 
-   lcd_gotoxy(10, 0);
-    if (y >530 )
-      lcd_puts("up   ");
-    else if (y < 100)
-      lcd_puts("down ");
-      if (position == 0)
-      position = 1;
-      else
-      position = 0;
+   ```c
+   PROJECT        // PlatfomIO project
+   ├── include
+   │  └── timer.h       
+   ├── lib             // Libraries
+   │  └── gpio
+   │       └── gpio.c
+   │       └── gpio.h
+   │
+   │   └── lcd
+   │        └── lcd.definitions.h
+   │        └── lcd.h
+   │        └── lcd.c
+   │
+   ├── src             // Source file(s)
+   │   └── main.c
+   └── platformio.ini  // Project Configuration File
+   ```
 
-}
+## Recommended README.md file structure
+
+### Team members
+
+* Maksim Migulia (233261)
+* Anna Litovska (______)
+
+## Hardware description
+
+### Joystick
+
+* GND to GND 
+* +5V to +5V
+* Vrx and Vry we connect to analog pins A0, A1 
+
+### Rotation encoder
+
+* GND to GND
+* +5V to +5V
+* CLK and DT to digital pins 11, 12
+* SW to digital pin 2
+
+### Digilent PmodCLP LCD modul 
+
+* GND to GND 
+* VCC to +5V J2
+* pins 7,10 to digital pins 4, 7
+* RW to GND
+* Rs and En to digital pins 8 and 9
+
+## Software description
+
+Put flowchats of your algorithm(s). Write descriptive text of your libraries and source files. Put direct links to these files in `src` or `lib` folders.
+
+## Video
+https://youtu.be/-JzXT4BKrfg
