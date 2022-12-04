@@ -26,7 +26,7 @@ Application of analog joy-stick (2 ADC channels, 1 push button), rotary encoder,
 ### Team members
 
 * Maksim Migulia (233261)
-* Anna Litovska (______)
+* Anna Litovska (231581)
 
 ## Hardware description
 
