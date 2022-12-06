@@ -68,3 +68,7 @@ Obr. 2 - Schéma zapojení v reálu
 
 ## Video
 https://youtu.be/-JzXT4BKrfg
+
+## Reference
+
+1. https://www.c-sharpcorner.com/article/how-to-connect-arduino-joystick-in-arduino-uno/
