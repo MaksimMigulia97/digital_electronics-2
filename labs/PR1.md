@@ -64,7 +64,7 @@ Obr. 2 - Schéma zapojení v reálu
 
 ![image](https://user-images.githubusercontent.com/99403646/205865422-d6dad741-c66c-4e6f-b598-7912b6b96adf.png)
 
-![image](https://user-images.githubusercontent.com/99403646/205871264-1e2f2d94-9007-4cdc-8468-667cb80f8101.png)
+![image](https://user-images.githubusercontent.com/99403646/205871501-d8fb3b2b-7343-461b-8de6-1120d30558d5.png)
 
 ## Video
 https://youtu.be/-JzXT4BKrfg
