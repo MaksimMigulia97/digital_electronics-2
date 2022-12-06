@@ -48,6 +48,7 @@ Application of analog joy-stick (2 ADC channels, 1 push button), rotary encoder,
 Obr. 1 - Schéma zapojení v SimulIDE
 
 ![image](https://user-images.githubusercontent.com/99403646/205864286-3a4a17cd-4702-49ea-a2d2-6c1e31e3c709.png)
+
 Obr. 2 - Schéma zapojení v reálu
 
 ## Software description
