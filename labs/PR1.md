@@ -62,7 +62,9 @@ Obr. 2 - Schéma zapojení v reálu
 
 ## Software description
 
-Put flowchats of your algorithm(s). Write descriptive text of your libraries and source files. Put direct links to these files in `src` or `lib` folders.
+![image](https://user-images.githubusercontent.com/99403646/205865422-d6dad741-c66c-4e6f-b598-7912b6b96adf.png)
+
+![image](https://user-images.githubusercontent.com/99403646/205865529-51586952-727d-4822-bb06-3401c3559a8b.png)
 
 ## Video
 https://youtu.be/-JzXT4BKrfg
