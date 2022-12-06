@@ -44,6 +44,13 @@ Application of analog joy-stick (2 ADC channels, 1 push button), rotary encoder,
 * RW to GND
 * Rs and En to digital pins 8 and 9
 
+### Rotation encoder
+
+* GND to GND
+* +5V to +5V
+* CLK and DT to digital pins 11, 12
+* SW to digital pin 2
+
 ![image](https://user-images.githubusercontent.com/99403646/205863718-c15f8ad5-0dea-43c7-92e9-262a9b21254c.png)
 
 Obr. 1 - Schéma zapojení v SimulIDE
