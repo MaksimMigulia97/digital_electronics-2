@@ -45,9 +45,11 @@ Application of analog joy-stick (2 ADC channels, 1 push button), rotary encoder,
 * Rs and En to digital pins 8 and 9
 
 ![image](https://user-images.githubusercontent.com/99403646/205863718-c15f8ad5-0dea-43c7-92e9-262a9b21254c.png)
+
 Obr. 1 - Schéma zapojení v SimulIDE
 
 ![image](https://user-images.githubusercontent.com/99403646/205864286-3a4a17cd-4702-49ea-a2d2-6c1e31e3c709.png)
+
 Obr. 2 - Schéma zapojení v reálu
 
 
